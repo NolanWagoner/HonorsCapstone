@@ -1,7 +1,7 @@
 <h2>Questionnaire</h2>
 <p>Answer the questions below to be paired up with advice specific to your cyber security needs.</p>
 
-<form>
+<form id="form-main">
   <p>1) Do you use the same 1-3 passwords for most or all of your online accounts? (includes similar passwords ex: change of only a few characters)</p>
     <input type="radio" id="pw-yes" name="pw" value="yes">
     <label for="pw-yes">Yes</label><br>
@@ -34,11 +34,13 @@
     <input type="radio" id="unlocked-sometimes" name="unlocked" value="sometimes">
     <label for="unlocked-sometimes">Sometimes</label><br>
 
-    <p>6) Do you use unsecured public Wi-Fi</p>
+    <p>6) Do you use unsecured public Wi-Fi?</p>
     <input type="radio" id="wifi-yes" name="wifi" value="yes">
     <label for="wifi-yes">Yes</label><br>
     <input type="radio" id="wifi-yesbut" name="wifi" value="yesbut">
     <label for="wifi-yesbut">Yes, but I verify it belongs to the business or place I am at</label><br>
     <input type="radio" id="wifi-no" name="wifi" value="no">
     <label for="wifi-no">No</label><br>
+
+    <input type="submit" value="submit" id="main-submit">
 </form>

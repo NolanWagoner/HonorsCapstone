@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { P404Component } from './p404/p404.component';
+import { SolutionsComponent } from './solutions/solutions.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { P404Component } from './p404/p404.component';
     HeaderComponent,
     FooterComponent,
     QuestionsComponent,
-    P404Component
+    P404Component,
+    SolutionsComponent
   ],
   imports: [
     BrowserModule,

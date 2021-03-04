@@ -23,36 +23,24 @@ export class SolutionsComponent implements OnInit {
       desc.appendChild(document.createTextNode('You are secure! No recommendations could be made because you already follow basic security guidelines.'));
       answerDiv!.appendChild(desc);
     }
-    //Load recommendations based on answers to questions (yes = load recommendations)
+    //Load recommendations based on answers to questions (yes = load recommendations by removing hidden attribute)
     if (this.answers?.charAt(0) == "1"){
-      var desc = document.createElement('p');
-      desc.appendChild(document.createTextNode('q1'));
-      answerDiv!.appendChild(desc);
+      document.getElementById('pw-solution')?.removeAttribute('hidden');
     }
     if (this.answers?.charAt(1) == "1"){
-      var desc = document.createElement('p');
-      desc.appendChild(document.createTextNode('q2'));
-      answerDiv!.appendChild(desc);
+      document.getElementById('antivirus-solution')?.removeAttribute('hidden');
     }
     if (this.answers?.charAt(2) == "1"){
-      var desc = document.createElement('p');
-      desc.appendChild(document.createTextNode('q3'));
-      answerDiv!.appendChild(desc);
+      document.getElementById('update-solution')?.removeAttribute('hidden');
     }
     if (this.answers?.charAt(3) == "1"){
-      var desc = document.createElement('p');
-      desc.appendChild(document.createTextNode('q4'));
-      answerDiv!.appendChild(desc);
+      document.getElementById('links-solution')?.removeAttribute('hidden');
     }
     if (this.answers?.charAt(4) == "1"){
-      var desc = document.createElement('p');
-      desc.appendChild(document.createTextNode('q5'));
-      answerDiv!.appendChild(desc);
+      document.getElementById('locking-solution')?.removeAttribute('hidden');
     }
     if (this.answers?.charAt(5) == "1"){
-      var desc = document.createElement('p');
-      desc.appendChild(document.createTextNode('q6'));
-      answerDiv!.appendChild(desc);
+      document.getElementById('wifi-solution')?.removeAttribute('hidden');
     }
   }
 

@@ -1,0 +1,40 @@
+mat-progress-bar{
+  position: sticky;
+  top: 40px;
+  height: 10px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.solution, h2, .indent{
+  margin-left: 19%;
+  margin-right: 19%;
+}
+
+.solution{
+  margin-bottom: -3px;
+  border-bottom: 3px solid  #2E7D32;
+  border-top: 3px solid  #2E7D32;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+a:link, a:visited {
+  color: #3b913f;
+}
+
+a:hover, a:active {
+  color: #2E7D32;
+}
+
+h3 {
+  color: #2E7D32;
+}
+
+h4 {
+  color: #3b913f;
+}
+
+button {
+  margin-top: 10px;
+}

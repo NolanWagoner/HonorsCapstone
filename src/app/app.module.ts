@@ -10,6 +10,9 @@ import { QuestionsComponent } from './questions/questions.component';
 import { P404Component } from './p404/p404.component';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { CitationsComponent } from './citations/citations.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { CitationsComponent } from './citations/citations.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatProgressBarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

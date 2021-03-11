@@ -5,5 +5,7 @@
   not done so yet, please fill out the first part of the survey on the Pre-App page. When you finish using the application you can fill out the post-App page and
   submit. Thank you for your willingness to participate in my honors capstone project!
 </p>
-<button onclick="window.open('https://forms.gle/m1QcSpM6WbAxa7Nz8', '_blank');">Survey</button>
-<button [routerLink]="['questions']">Begin</button>
+<div class="centered-buttons">
+  <a mat-stroked-button href="https://forms.gle/m1QcSpM6WbAxa7Nz8" target="_blank" color="primary" class="button">Survey</a>
+  <button mat-stroked-button [routerLink]="['questions']" color="primary" class="button">Begin</button>
+</div>

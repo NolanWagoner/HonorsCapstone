@@ -1,6 +1,11 @@
+<mat-progress-bar mode="determinate" [value]="progressValue" id="progress-bar" color="primary"></mat-progress-bar>
 <h2>Solutions</h2>
+<p class="indent">
+  Read through the information and suggested actions based on the answers you gave in the questionnaire. Select the button labeled "Got it!" after
+  reading through each section. Once complete, please complete the post-survey section of the Google Form and submit the form.
+</p>
 <div id="answerDiv">
-  <div id="pw-solution" hidden>
+  <div id="pw-solution" class="solution" hidden>
     <h3>Password Help</h3>
     <h4>Information</h4>
     <p>
@@ -29,9 +34,10 @@
       </li>
       <li>Setup two-factor authentication on your most important accounts</li>
     </ul>
+    <button mat-stroked-button id="pw-solution-completion" (click)="onCompletionButtonClick(0)" color="primary" [disabled]="pwSolutionCompletionDisabled">Got it!</button>
   </div>
 
-  <div id="antivirus-solution" hidden>
+  <div id="antivirus-solution" class="solution" hidden>
     <h3>Antivirus Help</h3>
     <h4>Information</h4>
     <p>
@@ -49,9 +55,10 @@
         <li><a href="https://www.sophos.com/" target="_blank">Sophos</a></li>
         <li><a href="https://www.malwarebytes.com/" target="_blank">Malwarebytes</a></li>
       </ul>
+      <button mat-stroked-button id="antivirus-solution-completion" (click)="onCompletionButtonClick(1)" color="primary" [disabled]="antivirusSolutionCompletionDisabled">Got it!</button>
   </div>
 
-  <div id="update-solution" hidden>
+  <div id="update-solution" class="solution" hidden>
     <h3>Update Help</h3>
     <h4>Information</h4>
     <p>
@@ -68,9 +75,10 @@
       <li>Update your devices when they prompt you to do so</li>
       <li>Use a trusted network to download updates</li>
     </ul>
+    <button mat-stroked-button id="update-solution-completion" (click)="onCompletionButtonClick(2)" color="primary" [disabled]="updateSolutionCompletionDisabled">Got it!</button>
   </div>
 
-  <div id="links-solution" hidden>
+  <div id="links-solution" class="solution" hidden>
     <h3>Suspicious Link Help</h3>
     <h4>Information</h4>
     <p>
@@ -86,9 +94,10 @@
       <li>Use <a href="https://transparencyreport.google.com/safe-browsing/search?url=test.unsafe.google.com.net" target="_blank">this Google site checker</a> to verify a website (a link can still be bad if not detected by this tool)</li>
       <li>If you are not sure about a link, the safest option is to not click on it</li>
     </ul>
+    <button mat-stroked-button id="links-solution-completion" (click)="onCompletionButtonClick(3)" color="primary" [disabled]="linksSolutionCompletionDisabled">Got it!</button>
   </div>
 
-  <div id="locking-solution" hidden>
+  <div id="locking-solution" class="solution" hidden>
     <h3>Device Locking Help</h3>
     <h4>Information</h4>
     <p>
@@ -103,9 +112,10 @@
       <li>Setup automatic locking after a certain period of time of inactivity</li>
       <li>Leave a note to remind yourself</li>
     </ul>
+    <button mat-stroked-button id="locking-solution-completion" (click)="onCompletionButtonClick(4)" color="primary" [disabled]="lockingSolutionCompletionDisabled">Got it!</button>
   </div>
 
-  <div id="wifi-solution" hidden>
+  <div id="wifi-solution" class="solution" hidden>
     <h3>Wi-Fi Help</h3>
     <h4>Information</h4>
     <p>
@@ -130,5 +140,14 @@
         </ul>
       </li>
     </ul>
+    <button mat-stroked-button id="wifi-solution-completion" (click)="onCompletionButtonClick(5)" color="primary" [disabled]="wifiSolutionCompletionDisabled">Got it!</button>
+  </div>
+
+  <div id="no-recommendations" class="solution" hidden>
+    <h3>Congratulations!</h3>
+    <p>
+      You follow the good security practices outlined by this application! <a href="https://us-cert.cisa.gov/ncas/tips" target="_blank">Here</a> is a website that
+      covers more common vulnerabilities in depth. Please continue to the post-survey in the google form.
+    </p>
   </div>
 </div>

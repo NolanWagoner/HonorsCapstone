@@ -19,6 +19,13 @@ export class SolutionsComponent implements OnInit {
   linksSolutionCompletionDisabled = false;
   lockingSolutionCompletionDisabled = false;
   wifiSolutionCompletionDisabled = false;
+  //Setting default innerHTML of "Got it!" completion buttons
+  pwSolutionCompletionValue = "Got it!";
+  antivirusSolutionCompletionValue = "Got it!";
+  updateSolutionCompletionValue = "Got it!";
+  linksSolutionCompletionValue = "Got it!";
+  lockingSolutionCompletionValue = "Got it!";
+  wifiSolutionCompletionValue = "Got it!";
 
   constructor(private route: ActivatedRoute) {
     this.answers = "";
@@ -66,21 +73,31 @@ export class SolutionsComponent implements OnInit {
     //Disable buttons after clicked
     if(divId == 0){
       this.pwSolutionCompletionDisabled = true;
+      this.pwSolutionCompletionValue = "Great job!";
     } else if(divId == 1){
       this.antivirusSolutionCompletionDisabled = true;
+      this.antivirusSolutionCompletionValue = "Great job!";
     } else if(divId == 2){
       this.updateSolutionCompletionDisabled = true;
+      this.updateSolutionCompletionValue = "Great job!";
     } else if(divId == 3){
       this.linksSolutionCompletionDisabled = true;
+      this.linksSolutionCompletionValue = "Great job!";
     } else if(divId == 4){
       this.lockingSolutionCompletionDisabled = true;
+      this.lockingSolutionCompletionValue = "Great job!";
     } else if(divId == 5){
       this.wifiSolutionCompletionDisabled = true;
+      this.wifiSolutionCompletionValue = "Great job!";
     }
     //calculate percentage complete and update the progress bar
     this.totalSolutionsCompleted++;
     percentageComplete = (this.totalSolutionsCompleted / this.totalSolutions) * 100;
     this.progressValue = percentageComplete;
+    //If 100% complete the thankYouDiv appears
+    if(this.progressValue == 100){
+      document.getElementById('thankYouDiv')?.removeAttribute('hidden');
+    }
   }
 
 }

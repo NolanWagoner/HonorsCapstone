@@ -1,4 +1,7 @@
 <mat-progress-bar mode="determinate" [value]="progressValue" id="progress-bar" color="primary"></mat-progress-bar>
+<div id="thankYouDiv" class="thankYou" hidden>
+  <h3>Thank you for participating! Please complete the Post-Survey</h3>
+</div>
 <h2>Solutions</h2>
 <p class="indent">
   Read through the information and suggested actions based on the answers you gave in the questionnaire. Select the button labeled "Got it!" after
@@ -34,7 +37,7 @@
       </li>
       <li>Setup two-factor authentication on your most important accounts</li>
     </ul>
-    <button mat-stroked-button id="pw-solution-completion" (click)="onCompletionButtonClick(0)" color="primary" [disabled]="pwSolutionCompletionDisabled">Got it!</button>
+    <button mat-stroked-button id="pw-solution-completion" (click)="onCompletionButtonClick(0)" color="primary" [disabled]="pwSolutionCompletionDisabled" [innerHTML]="pwSolutionCompletionValue"></button>
   </div>
 
   <div id="antivirus-solution" class="solution" hidden>
@@ -55,7 +58,7 @@
         <li><a href="https://www.sophos.com/" target="_blank">Sophos</a></li>
         <li><a href="https://www.malwarebytes.com/" target="_blank">Malwarebytes</a></li>
       </ul>
-      <button mat-stroked-button id="antivirus-solution-completion" (click)="onCompletionButtonClick(1)" color="primary" [disabled]="antivirusSolutionCompletionDisabled">Got it!</button>
+      <button mat-stroked-button id="antivirus-solution-completion" (click)="onCompletionButtonClick(1)" color="primary" [disabled]="antivirusSolutionCompletionDisabled" [innerHTML]="antivirusSolutionCompletionValue"></button>
   </div>
 
   <div id="update-solution" class="solution" hidden>
@@ -75,7 +78,7 @@
       <li>Update your devices when they prompt you to do so</li>
       <li>Use a trusted network to download updates</li>
     </ul>
-    <button mat-stroked-button id="update-solution-completion" (click)="onCompletionButtonClick(2)" color="primary" [disabled]="updateSolutionCompletionDisabled">Got it!</button>
+    <button mat-stroked-button id="update-solution-completion" (click)="onCompletionButtonClick(2)" color="primary" [disabled]="updateSolutionCompletionDisabled" [innerHTML]="updateSolutionCompletionValue"></button>
   </div>
 
   <div id="links-solution" class="solution" hidden>
@@ -94,7 +97,7 @@
       <li>Use <a href="https://transparencyreport.google.com/safe-browsing/search?url=test.unsafe.google.com.net" target="_blank">this Google site checker</a> to verify a website (a link can still be bad if not detected by this tool)</li>
       <li>If you are not sure about a link, the safest option is to not click on it</li>
     </ul>
-    <button mat-stroked-button id="links-solution-completion" (click)="onCompletionButtonClick(3)" color="primary" [disabled]="linksSolutionCompletionDisabled">Got it!</button>
+    <button mat-stroked-button id="links-solution-completion" (click)="onCompletionButtonClick(3)" color="primary" [disabled]="linksSolutionCompletionDisabled" [innerHTML]="linksSolutionCompletionValue"></button>
   </div>
 
   <div id="locking-solution" class="solution" hidden>
@@ -112,7 +115,7 @@
       <li>Setup automatic locking after a certain period of time of inactivity</li>
       <li>Leave a note to remind yourself</li>
     </ul>
-    <button mat-stroked-button id="locking-solution-completion" (click)="onCompletionButtonClick(4)" color="primary" [disabled]="lockingSolutionCompletionDisabled">Got it!</button>
+    <button mat-stroked-button id="locking-solution-completion" (click)="onCompletionButtonClick(4)" color="primary" [disabled]="lockingSolutionCompletionDisabled" [innerHTML]="lockingSolutionCompletionValue"></button>
   </div>
 
   <div id="wifi-solution" class="solution" hidden>
@@ -140,7 +143,7 @@
         </ul>
       </li>
     </ul>
-    <button mat-stroked-button id="wifi-solution-completion" (click)="onCompletionButtonClick(5)" color="primary" [disabled]="wifiSolutionCompletionDisabled">Got it!</button>
+    <button mat-stroked-button id="wifi-solution-completion" (click)="onCompletionButtonClick(5)" color="primary" [disabled]="wifiSolutionCompletionDisabled" [innerHTML]="wifiSolutionCompletionValue"></button>
   </div>
 
   <div id="no-recommendations" class="solution" hidden>

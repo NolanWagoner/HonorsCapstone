@@ -22,7 +22,7 @@ export class QuestionsComponent implements OnInit {
       } else{
         answers = answers + '0';
       }
-      var q2 = document.getElementById('anti-yes') as HTMLInputElement;
+      var q2 = document.getElementById('anti-no') as HTMLInputElement;
       if(q2.checked){
         answers = answers + '1';
       } else{
